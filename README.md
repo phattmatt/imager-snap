@@ -46,20 +46,12 @@ things before opening an issue:
     sudo snap connect rpi-imager:mount-observe
     sudo snap connect rpi-imager:removable-media
 
-### UI integration
-
-I have made some efforts to update the UI integration of the snap, so the fonts
-*should* now appear at the correct size, the cursor should be the native one,
-and the native GTK-3 open dialog *should* be used in the case of selecting a
-custom image. I would be interested to hear of any issues in the area of UI
-integration.
-
 ### Size
 
-As the Imager is based on the Qt5 UI framework, and snap's support for Qt5 (on
+As the Imager is based on the Qt6 UI framework, and snap's support for Qt6 (on
 architectures other than `amd64`) is …
 [complicated](https://forum.snapcraft.io/t/deprecated-desktop-app-support-qt5/11703),
-the size of the snap is necessarily *huge* (because it's bundling much of Qt5).
+the size of the snap is necessarily *huge* (because it's bundling much of Qt6).
 This also means its start-up time is less than stellar; sorry about that.
 
 ## Useful links
@@ -67,4 +59,3 @@ This also means its start-up time is less than stellar; sorry about that.
 * [Store page](https://snapcraft.io/rpi-imager)
 * [Original source code](https://github.com/raspberrypi/rpi-imager)
 * [Official download (Win/macOS/Deb-x86)](https://www.raspberrypi.com/software/)
-* [Ubuntu packaging of Imager](https://launchpad.net/ubuntu/+source/rpi-imager)
