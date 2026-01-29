@@ -3,7 +3,7 @@ base: core24
 adopt-info: imagewriter
 summary: Raspberry Pi Imager
 website: https://www.raspberrypi.com/software/
-source-code: https://github.com/r41k0u/rpi-imager
+source-code: https://github.com/raspberrypi/rpi-imager
 issues: https://github.com/waveform80/imager-snap
 icon: images/rpi-imager.png
 license: Apache-2.0
@@ -153,7 +153,7 @@ parts:
     override-pull: |
       craftctl default
       git fetch
-      git checkout v2.0.5
+      git checkout v1.9.6
     override-build: |
       cd "$CRAFT_PART_SRC"/qt
       ./build-qt.sh --version=6.9.3 --prefix="$CRAFT_PART_INSTALL"
@@ -169,14 +169,14 @@ parts:
     source-type: git
     override-pull: |
       craftctl default
-      craftctl set version="2.0.5"
+      craftctl set version="1.9.6"
       git fetch
-      git checkout v2.0.5
+      git checkout v1.9.6
 
       # Point the icon to the right place
-      #sed -i -e \
-      #  's|^Icon=rpi-imager|Icon=/usr/local/share/icons/hicolor/128x128/apps/rpi-imager.png|' \
-      #  "$CRAFT_PART_SRC"/debian/org.raspberrypi.rpi-imager.desktop
+      sed -i -e \
+        's|^Icon=rpi-imager|Icon=/usr/local/share/icons/hicolor/128x128/apps/rpi-imager.png|' \
+        "$CRAFT_PART_SRC"/debian/org.raspberrypi.rpi-imager.desktop
     stage-packages:
       - util-linux
       - dosfstools
