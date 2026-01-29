@@ -175,8 +175,6 @@ parts:
     source-type: git
     source-tag: v1.9.6
     source-subdir: src
-    build-environment:
-      - PROJECT_NAME: rpi-imager
     stage-packages:
       - util-linux
       - dosfstools
