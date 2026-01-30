@@ -171,6 +171,19 @@ parts:
       ./build-qt.sh \
         --unprivileged \
         --prefix="$CRAFT_PART_INSTALL"/usr
+    stage:
+      # Get rid of stuff the linter says we don't need
+      - -usr/lib/libQt6Bluetooth.so.6.9.0
+      - -usr/lib/libQt6Coap.so.6.9.0
+      - -usr/lib/libQt6Core5Compat.so.6.9.0
+      - -usr/lib/libQt6GraphsWidgets.so.6.9.0
+      - -usr/lib/libQt6HttpServer.so.6.9.0
+      - -usr/lib/libQt6Mqtt.so.6.9.0
+      - -usr/lib/libQt6MultimediaWidgets.so.6.9.0
+      - -usr/lib/libQt6NetworkAuth.so.6.9.0
+      - -usr/lib/libQt6Nfc.so.6.9.0
+      - -usr/lib/libQt6PdfWidgets.so.6.9.0
+      - -usr/lib/libQt6SvgWidgets.so.6.9.0
   imagewriter:
     after: [qt]
     plugin: cmake
