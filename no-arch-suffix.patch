@@ -1,6 +1,0 @@
---- a/qt/build-qt.sh
-+++ b/qt/build-qt.sh
-@@ -45,2 +45 @@
--# Set architecture-specific prefix suffix
--set_arch_prefix_suffix
-+# Snapcraft supplies the complete installation prefix for each architecture.
