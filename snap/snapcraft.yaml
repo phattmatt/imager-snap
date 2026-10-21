@@ -38,7 +38,14 @@ confinement: strict
 platforms:
   amd64: null
   arm64: null
-  armhf: null
+  # Can't build armhf until the kf6-core24 KDE runtime supports it
+  #armhf: null
+  # Can't build riscv64 until the kf6-core24 KDE runtime supports it
+  #riscv64: {}
+  # Can't build ppc64el until the kf6-core24 KDE runtime supports it
+  #ppc64el: {}
+  # The kf6-core24 KDE runtime doesn't support s390x; upstream is also little-endian specific
+  #s390x: {}
 
 apps:
   rpi-imager:
